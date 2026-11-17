@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+.main {
+    background-image: url("./assets/train.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
