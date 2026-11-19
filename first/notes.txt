@@ -1,0 +1,35 @@
+
+
+routing => react routing 
+
+it is an package to use this functionality => to install 
+
+page navigate with reloading 
+
+it provides a URL to the particular page 
+
+
+
+
+
+
+browserRouter => it enables the routing in our application 
+
+routes =>  to contain all the route 
+
+route => to define a particular page / url 
+
+
+
+first => install react-router-dom  => npm i react-router-dom
+second => main.jsx => reactDOM.createRoot (import this ) , 
+third => main.jsx => <browserRouter></browserRouter> (import this)
+fourth => app.jsx => <Routes> </Routes> (import this )
+five => app.jsx => <Route path="url name" element={<call page />} />   ( to make a particular page url )
+
+
+
+to add the link or navigate the page => Link
+
+<Link to="url"> Name </Link > => (import this react-router-dom)
+
