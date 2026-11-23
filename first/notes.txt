@@ -33,3 +33,10 @@ to add the link or navigate the page => Link
 
 <Link to="url"> Name </Link > => (import this react-router-dom)
 
+
+
+
+
+
+props (property ) => props are used to pass data from one component to another component
+
