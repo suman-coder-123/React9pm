@@ -7,6 +7,7 @@ import Student from "./pages/Student"
 import DashboardLayout from "./layouts/DashboardLayout"
 import Dashboard from "./pages/Dashboard"
 import Teacher from "./pages/Teacher"
+import AddStudent from "./components/AddStudent"
 
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/addStudent" element={<AddStudent />} />
     </Route> 
 
     <Route path="/dashboard" element={<DashboardLayout />} >
