@@ -1,16 +1,19 @@
-import { Route, Routes } from "react-router-dom"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
-import MainLayout from "./layouts/MainLayout"
-import Student from "./pages/Student"
-import DashboardLayout from "./layouts/DashboardLayout"
-import Dashboard from "./pages/Dashboard"
-import Teacher from "./pages/Teacher"
-import AddStudent from "./components/AddStudent"
+// import { Route, Routes } from "react-router-dom"
+// import Home from "./pages/Home"
+// import About from "./pages/About"
+// import Contact from "./pages/Contact"
+// import MainLayout from "./layouts/MainLayout"
+// import Student from "./pages/Student"
+// import DashboardLayout from "./layouts/DashboardLayout"
+// import Dashboard from "./pages/Dashboard"
+// import Teacher from "./pages/Teacher"
+// import AddStudent from "./components/AddStudent"
+
+import { useState } from "react"
 
 
-const App = () => {
+
+// const App = () => {
 
 
   // const students = [
@@ -44,25 +47,25 @@ const App = () => {
   //   }
   // ]
 
-  return (
-    <div>
+  // return (
+  //   <div>
     
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/addStudent" element={<AddStudent />} />
-    </Route> 
+  //   <Routes>
+  //     <Route path="/" element={<MainLayout />}>
+  //       <Route index element={<Home />} />
+  //       <Route path="/about" element={<About />} />
+  //       <Route path="/contact" element={<Contact />} />
+  //       <Route path="/addStudent" element={<AddStudent />} />
+  //   </Route> 
 
-    <Route path="/dashboard" element={<DashboardLayout />} >
-      <Route index element={<Dashboard />} />
-      <Route path="student" element={<Student />} />
-      <Route path="teacher" element={<Teacher />} />
-    </Route> 
+  //   <Route path="/dashboard" element={<DashboardLayout />} >
+  //     <Route index element={<Dashboard />} />
+  //     <Route path="student" element={<Student />} />
+  //     <Route path="teacher" element={<Teacher />} />
+  //   </Route> 
 
 
-    </Routes>
+  //   </Routes>
 
 
 
@@ -86,12 +89,84 @@ const App = () => {
 
 
     
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+// const App = () => {
+
+//   let count = 1;
+
+//   function increase() {
+//     count++;
+//     console.log(count);
+//   }
+
+//   return (
+//     <div>
+//       <h1>{count}</h1>  
+//       <button className="px-3 py-2 border-2" onClick={increase} >increase</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import { useState } from "react"
+
+
+// const App = () => {
+
+//   const [count , setCount] = useState(0);
+
+
+//   function increase () {
+//     setCount(count+1);
+//   }
+
+//   function decrease() {
+//     setCount(count-1);
+//   }
+ 
+//   function reset(){
+//     setCount(0);
+//   }
+//   return (
+//     <div>
+//       <h1>Counter : {count}</h1>
+//       <button onClick={increase}>Increase </button>
+//       <button onClick={decrease}>decrease </button>
+//       <button onClick={reset}>Reset</button>
+//     </div>  
+//   )
+// }
+
+// export default App
+
+
+
+
+
+const App = () => {
+  const [ showPassword , setShowPassword] = useState(false);
+  return (
+    <div>
+      <input type={showPassword ? "text" : "password"} placeholder="enter your password" />
+
+      <button  onClick={() => setShowPassword(!showPassword)}>{showPassword ? "Hide" : "Show"}</button>
     </div>
   )
 }
 
-export default App
-
-
-
-
+export default App  

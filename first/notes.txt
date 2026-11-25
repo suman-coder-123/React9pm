@@ -44,3 +44,33 @@ useNavigate()  => to redirect another route
 
 
 
+JAVASCRIPT => there are 2 ways to write the code 
+
+1. functional 
+ 2. classes 
+
+
+
+ Hooks => it is special function provided by react that allow us to use react features inside functional component 
+
+
+ work 
+
+ 1. management of component state 
+ 2. handle side effect 
+ 3. access context 
+ 4. reuse component logic 
+
+
+
+
+ 1. useState => this hook allow use to stre and update data inside a component 
+
+ syntax 
+
+ const [ count , setCount] = useState(0);
+
+count => current state value 
+setCount => function to store updated value 
+0 => initial value 
+
