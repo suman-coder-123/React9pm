@@ -9,7 +9,7 @@
 // import Teacher from "./pages/Teacher"
 // import AddStudent from "./components/AddStudent"
 
-import { useState } from "react"
+
 
 
 
@@ -158,15 +158,112 @@ import { useState } from "react"
 
 
 
-const App = () => {
-  const [ showPassword , setShowPassword] = useState(false);
-  return (
-    <div>
-      <input type={showPassword ? "text" : "password"} placeholder="enter your password" />
+// const App = () => {
+//   const [ showPassword , setShowPassword] = useState(false);
+//   return (
+//     <div>
+//       <input type={showPassword ? "text" : "password"} placeholder="enter your password" />
 
-      <button  onClick={() => setShowPassword(!showPassword)}>{showPassword ? "Hide" : "Show"}</button>
+//       <button  onClick={() => setShowPassword(!showPassword)}>{showPassword ? "Hide" : "Show"}</button>
+//     </div>
+//   )
+// }
+
+// export default App  
+
+
+
+
+// const App = () => {
+ 
+//   const [ darkMode , setDarkMode] = useState(false);
+
+//   function toggleMode () {
+//     setDarkMode(pre => !pre);
+//   }
+
+
+//   return (
+//     <div style={{
+//       backgroundColor : darkMode ? "#121212" : "#ffffff" , 
+//       color : darkMode ? "#ffffff" : "#000000",
+//       minHeight: "100vh",
+//       padding : "30px"  
+//        }}>
+//       <h1>{darkMode ? "Dark mode " : "Light Mode "}</h1>
+//       <p>welcome to react application</p>
+//       <button onClick={toggleMode}>{darkMode ? "Switch to light mode" : "Switch to dark mode "}</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import { useEffect, useState } from "react"
+
+
+// const App = () => {
+
+
+  // useEffect (() => {
+  //   document.title = "React App";
+  // } , []);
+
+  // useEffect(() => {
+  //   console.log("component rendered");
+  // } );
+
+  // useEffect(() => {
+  //   console.log("component mounted");
+  // }, []);
+
+
+//   const [count , setCount] = useState(0);
+
+//   useEffect(() => {
+//     console.log(count);
+//   },[count]);
+//   return (
+//     <div>
+//       <h1>hello react </h1>
+
+//       <h1>Count : {count}</h1>
+//       <button onClick={() => setCount(count+1)}>Increase</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// Date => it is keyword used to print the date  =>  time => toLocaleTimeString => time 
+import { useEffect, useState } from "react"
+
+
+const App = () => {
+
+
+  const [ time , setTime ] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    } , 1000);
+
+    return () => {
+      clearInterval(timer);
+    }
+  } , []);
+  return (
+    
+    <div>
+      <h1>Digital Clock</h1>
+      <h2>{time.toLocaleTimeString()}</h2>
     </div>
   )
 }
 
-export default App  
+export default App

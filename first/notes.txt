@@ -74,3 +74,13 @@ count => current state value
 setCount => function to store updated value 
 0 => initial value 
 
+
+
+UseEffect => it is a react hook used to perform side effect in a react component 
+
+a side effect is an operation that happens outside the normal process of rendering UI 
+
+=> fetching data from an API 
+=> update the doucment title 
+=> setting a timer 
+
