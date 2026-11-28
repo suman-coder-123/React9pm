@@ -84,3 +84,28 @@ a side effect is an operation that happens outside the normal process of renderi
 => update the doucment title 
 => setting a timer 
 
+
+
+
+
+user name = suman => shared data => globally access  => context create 
+
+app.js =>  i can call the api of user name 
+
+navbar , profile , add to cart 
+
+prop drilling => it menas passing data from a parent component to a deeply nested child compnenent thorugh components 
+
+solution => useContext 
+
+
+
+
+UseContext => this react hook used to access shared data from a context without manually passing props through multiple levels of component 
+
+how to create context 
+
+1. create context using createContext();
+2. Provide data using context Provider 
+3. Access data using useContext
+

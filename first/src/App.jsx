@@ -9,6 +9,12 @@
 // import Teacher from "./pages/Teacher"
 // import AddStudent from "./components/AddStudent"
 
+import AddStudent from "./components/AddStudent";
+// import Navbar from "./components/Navbar";
+import  { UserProvider } from "./context/UserContext"
+import Dashboard from "./pages/Dashboard";
+// import Teacher from "./pages/Teacher";
+
 
 
 
@@ -240,28 +246,57 @@
 
 
 // Date => it is keyword used to print the date  =>  time => toLocaleTimeString => time 
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
+
+
+// const App = () => {
+
+
+//   const [ time , setTime ] = useState(new Date());
+
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setTime(new Date());
+//     } , 1000);
+
+//     return () => {
+//       clearInterval(timer);
+//     }
+//   } , []);
+//   return (
+    
+//     <div>
+//       <h1>Digital Clock</h1>
+//       <h2>{time.toLocaleTimeString()}</h2>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
 
 
 const App = () => {
 
+  // const user = "suman";
 
-  const [ time , setTime ] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date());
-    } , 1000);
-
-    return () => {
-      clearInterval(timer);
-    }
-  } , []);
+   
   return (
-    
     <div>
-      <h1>Digital Clock</h1>
-      <h2>{time.toLocaleTimeString()}</h2>
+      {/* <UserContext.Provider value={user}>
+        <Navbar />
+        <Teacher />
+      </UserContext.Provider> */}
+
+
+     <UserProvider>
+      <AddStudent />
+      <Dashboard />
+     </UserProvider>
+
+
     </div>
   )
 }

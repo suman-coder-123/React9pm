@@ -8,7 +8,7 @@
 //   )
 // }
 
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 
 // export default Student
 
@@ -51,26 +51,53 @@ import { useNavigate } from "react-router-dom"
 
 
 
+// const AddStudent = () => {
+
+//   const navigate = useNavigate();
+
+//   function handleSubmit (e) {
+//     e.preventDefault();
+
+//     alert("student added successfully");
+
+//     navigate("/dashboard/student") 
+//   }
+
+//   return (
+//     <div>
+//       <form  onSubmit={handleSubmit}>
+//         <input type="text"
+//         placeholder="student name" />
+
+//         <button type="submit"> Add Submit</button>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default AddStudent
+
+
+
+
+
+
+import  { useContext } from 'react'
+import UserContext from '../context/UserContext'
+
 const AddStudent = () => {
 
-  const navigate = useNavigate();
-
-  function handleSubmit (e) {
-    e.preventDefault();
-
-    alert("student added successfully");
-
-    navigate("/dashboard/student") 
-  }
-
+  const {user , logout} = useContext(UserContext);
   return (
     <div>
-      <form  onSubmit={handleSubmit}>
-        <input type="text"
-        placeholder="student name" />
+      <h2>My website </h2>
+      <h2>Name : {user.name}</h2>
+      <h3>Email : {user.email}</h3>
+      <h3>Role : {user.role}</h3>
 
-        <button type="submit"> Add Submit</button>
-      </form>
+      {user.isLoggedIn ? (<button onClick={logout}>Logout</button>)  : (
+        <p>Guest User </p>
+      )}
     </div>
   )
 }
